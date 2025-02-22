@@ -6,15 +6,18 @@ public class Terminalmanager
 
     
     
-    public void operationHandler()
+    public async void operationHandler()
     {
         string input = Console.ReadLine();
         switch (input)
         {
-            case "add_item":
-                Console.WriteLine("The item have been added to the list");
+            case "barcode":
+                Console.WriteLine("Please enter the barcode of the item: ");
+                string barcode = Console.ReadLine();
+                BarcodeAPI.GetAsync(barcode);
+                
                 break;
-            default:
+            default:   
                 Console.WriteLine("The input is invalid");
                 break;
                 
