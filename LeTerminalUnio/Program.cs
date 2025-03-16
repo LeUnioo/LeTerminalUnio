@@ -4,16 +4,13 @@ namespace LeTerminalUnio
 {
     class Program
     {
-        private static Terminalmanager terminalmanager;
+        private static Terminalmanager.Terminalmanager terminalmanager;
         
         public static void Main(string[] args)
         {
-            terminalmanager = new Terminalmanager();
+            terminalmanager = new Terminalmanager.Terminalmanager();
             terminalmanager.operationHandler();
             
-            
-
-
 
         }
 

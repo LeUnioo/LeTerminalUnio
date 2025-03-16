@@ -1,11 +1,7 @@
-namespace LeTerminalUnio;
+namespace LeTerminalUnio.Terminalmanager;
 
 public class Terminalmanager
 {
-     
-
-    
-    
     public async void operationHandler()
     {
         string input = Console.ReadLine();
