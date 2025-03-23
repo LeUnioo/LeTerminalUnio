@@ -4,9 +4,16 @@ namespace LeTerminalUnio.Utilities
     {
         private string drinkIdentifier;
         private string foodIdentifier;
+
+
+        public IdentifieConsumable()
+        {
+            
+        }
         
         
-        f
+        
+        
         
     }
 }
