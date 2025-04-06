@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeTerminalUnio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ea27201d2632957800844c4f8fc11fd10bdecf7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f1f5e63c28b3399ff7ceba3e0261d0dc2db9f76")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeTerminalUnio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeTerminalUnio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
