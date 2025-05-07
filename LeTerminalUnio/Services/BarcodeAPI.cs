@@ -13,15 +13,17 @@ using System.Threading.Tasks;
 public class BarcodeAPI
 {
 
-    Dictionary<string, consumable> items = new Dictionary<string, consumable>();
+    static Dictionary<string, consumable> items = new Dictionary<string, consumable>();
+    
+    // Use this barcode when testing: 5053990127740
     
     
-    public static async Task GetAsync(string barcode)
+    public static async Task addItem(string barcode)
     {
         using (var client = new HttpClient())
         {
             var endpoint =
-                new Uri("https://world.openfoodfacts.org/api/v0/product/" + barcode + ".json?fields=code,product,categories");
+                new Uri("https://world.openfoodfacts.org/api/v0/product/" + barcode + ".json?fields=code,product,categories,product_name");
             var result = client.GetAsync(endpoint).Result;
             var jsonString = result.Content.ReadAsStringAsync().Result;
             Console.WriteLine(jsonString);
@@ -30,17 +32,36 @@ public class BarcodeAPI
             // Parse JSON using JObject
             JObject json = JObject.Parse(jsonString);
             
-            // TODO: complete the parser part, so that the response is transferred to a consumable object
+           
             string consumableBarcode = json["code"].ToString();
             string productName = json["product"]?["product_name"]?.ToString() ?? "No name";
             string categories = json["product"]?["categories"]?.ToString() ?? "No categories";
             
             
-            consumable itemConsumable = new consumable(consumableBarcode, productName, categories);
-
+          
+            items.Add(consumableBarcode, new consumable{barcode = consumableBarcode, name = productName, category = categories});
             
+            Console.WriteLine("Item count: " + items.Count);
+            Console.WriteLine("The items have been added to the list: " + items[consumableBarcode].name);
+            // TODO: In the furture, A database will have to be added and connected to
             
             
         }
     }
+
+    public static void deleteItem(string barcode)
+    {
+        items.Remove(barcode);
+    }
+
+    public static void listAllItems()
+    {
+        foreach (KeyValuePair<string, consumable> entry in items)
+        {
+            Console.WriteLine($"Barcode: {entry.Key}, Name: {entry.Value.name}");
+        }
+
+    }
+    
+    
 }

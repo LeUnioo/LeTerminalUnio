@@ -9,8 +9,13 @@ namespace LeTerminalUnio
         public static void Main(string[] args)
         {
             terminalmanager = new Terminalmanager.Terminalmanager();
-            terminalmanager.operationHandler();
-            
+
+            while (true)
+            {   
+                Console.WriteLine("Welcome to the LeTerminalUnio Console, available commands are listed in the provided README file");
+                
+                terminalmanager.operationHandler();
+            }
 
         }
 
