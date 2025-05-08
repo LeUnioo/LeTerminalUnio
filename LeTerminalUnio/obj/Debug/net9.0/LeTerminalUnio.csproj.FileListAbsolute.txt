@@ -28,3 +28,6 @@ C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\ref
 C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\LeTerminalUnio.pdb
 C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\LeTerminalUnio.genruntimeconfig.cache
 C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\ref\LeTerminalUnio.dll
+C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\LeTerminalUnio.csproj.AssemblyReference.cache
+C:\Users\Bruger\RiderProjects\LeTerminalUnio\LeTerminalUnio\obj\Debug\net9.0\LeTermin.DB7CEAD2.Up2Date

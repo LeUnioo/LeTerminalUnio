@@ -4,16 +4,18 @@ namespace LeTerminalUnio
 {
     class Program
     {
-        private static Terminalmanager terminalmanager;
+        private static Terminalmanager.Terminalmanager terminalmanager;
         
         public static void Main(string[] args)
         {
-            terminalmanager = new Terminalmanager();
-            terminalmanager.operationHandler();
-            
-            
+            terminalmanager = new Terminalmanager.Terminalmanager();
 
-
+            while (true)
+            {   
+                Console.WriteLine("Welcome to the LeTerminalUnio Console, available commands are listed in the provided README file");
+                
+                terminalmanager.operationHandler();
+            }
 
         }
 
